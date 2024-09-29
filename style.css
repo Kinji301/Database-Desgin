@@ -31,12 +31,13 @@ form{
 }
 
 /* Place the Title like Register and Sign In in the middle */
-.form-title{
-  font-size:1.5rem;
-  font-weight:bold;
-  text-align:center;
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold; /* Makes the text bold */
+  text-align: center; /* Centers the text */
   padding: 1.3rem;
 }
+
 
 /* Place the Title like Register and Sign In in the middle */
 input{
