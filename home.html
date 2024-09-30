@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Store - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 9/30/24: Header with User Profile and Cart -->
+    <header>
+        <h1>Welcome to the eBook Store</h1>
+        <div class="header-right">
+            <button id="profileButton">Profile</button>
+            <button id="cartButton">Cart (0)</button>
+        </div>
+    </header>
+
+    <!-- 9/30/24: Book Selection Section -->
+    <section id="book-selection">
+        <h2>Featured Books</h2>
+        <div class="book-grid">
+            <!-- Book 1 -->
+            <div class="book">
+                <img src="book1.jpg" alt="Book 1" />
+                <h3>Book Title 1</h3>
+                <p>Author: Author 1</p>
+                <p>Price: $10.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Book 2 -->
+            <div class="book">
+                <img src="book2.jpg" alt="Book 2" />
+                <h3>Book Title 2</h3>
+                <p>Author: Author 2</p>
+                <p>Price: $12.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Book 3 -->
+            <div class="book">
+                <img src="book3.jpg" alt="Book 3" />
+                <h3>Book Title 3</h3>
+                <p>Author: Author 3</p>
+                <p>Price: $8.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Book 4 -->
+            <div class="book">
+                <img src="book4.jpg" alt="Book 4" />
+                <h3>Book Title 4</h3>
+                <p>Author: Author 4</p>
+                <p>Price: $15.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Book 5 -->
+            <div class="book">
+                <img src="book5.jpg" alt="Book 5" />
+                <h3>Book Title 5</h3>
+                <p>Author: Author 5</p>
+                <p>Price: $9.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Book 6 -->
+            <div class="book">
+                <img src="book6.jpg" alt="Book 6" />
+                <h3>Book Title 6</h3>
+                <p>Author: Author 6</p>
+                <p>Price: $7.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9/30/24: Cart Section (Initially Hidden) -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <p>Your cart is empty.</p>
+    </section>
+
+    <!-- 9/30/24: User Profile Section (Initially Hidden) -->
+    <section id="profile" style="display:none;">
+        <h2>User Profile</h2>
+        <p>Name: John Doe</p>
+        <p>Email: johndoe@example.com</p>
+    </section>
+
+    <script src="home.js"></script>
+</body>
+</html>
