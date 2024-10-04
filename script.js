@@ -1,8 +1,13 @@
 const signUpButton = document.getElementById('signUpButton');
-const signInButton = document.getElementById('signInButton'); // Corrected spelling
+const signInButton = document.getElementById('signInButton'); 
 const signInForm = document.getElementById('signIn');
-const signUpForm = document.getElementById('signup'); // Ensure this matches the HTML
+const signUpForm = document.getElementById('signup');
 
+// Built-in credentials for login
+const adminEmail = "admin@gmail.com";
+const adminPassword = "admin123";
+
+// Event to toggle forms (Sign Up and Sign In)
 signUpButton.addEventListener('click', function() {
   signInForm.style.display = 'none';
   signUpForm.style.display = 'block';
@@ -13,28 +18,18 @@ signInButton.addEventListener('click', function() {
   signUpForm.style.display = 'none';
 });
 
+// Function to handle Sign In form submission only
+signInForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting the traditional way
 
-// 9/30/24: Add event listener to handle sign-in form submission and redirect to home page
-const signInSubmitButton = document.querySelector('#signIn input[type="submit"]');
-signInSubmitButton.addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent the form from refreshing the page
+  const emailInput = document.querySelector('#signIn input[name="email"]').value;
+  const passwordInput = document.querySelector('#signIn input[name="password"]').value;
 
-  // Get the email and password values and trim any extra spaces
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
-
-  // Log the values to verify if they are captured correctly
-  console.log("Entered Email:", email);
-  console.log("Entered Password:", password);
-
-  // Set the expected values for email and password
-  const validEmail = "name@domain.com";
-  const validPassword = "password123";
-
-  // Check if the input matches the valid credentials
-  if (email === validEmail && password === validPassword) {
-    window.location.href = 'home.html'; // Redirect to the home page
+  // Check if the credentials match for Sign In
+  if (emailInput === adminEmail && passwordInput === adminPassword) {
+    // Redirect to another HTML page upon successful login
+    window.location.href = "home.html"; // Replace 'dashboard.html' with the page you want to redirect to
   } else {
-    alert(`Entered Email: ${email}, Entered Password: ${password} \nPlease use the correct email: name@domain.com and password: password123`);
+    alert("Invalid email or password. Please try again.");
   }
 });
